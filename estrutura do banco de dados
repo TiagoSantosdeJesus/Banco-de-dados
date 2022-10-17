@@ -1,0 +1,38 @@
+Exercício
+De acordo com as tabelas, programe um código SQL para gerar a estrutura do banco de dados dessa biblioteca. 
+Siga as instruções: 
+
+1. inclua a coluna DATA_NASCIMENTO na tabela ALUNO do tipo string e de tamanho 10 caracteres; 
+2. altere a coluna TELEFONE para CONTATO e seu tipo de dado para string; 
+3. inclua o campo ISBN na tabela LIVRO, com tamanho de 13 caracteres do tipo inteiro; 
+4. e remova o campo ISBN da tabela LIVRO. 
+_________________________________________________________________________________________________________________________________
+// comando para criar o banco de dados no mysql
+
+create database Biblioteca;
+
+// comando para selecionar um banco de dados dentro do mysql
+
+use Biblioteca;
+
+// comando para criar tabela no mysql
+
+create table Aluno (
+Nome varchar(30),
+Telefone int(11),
+Livro varchar(30)
+);
+
+creat table Livro (
+Id_livro int(11)
+)
+
+// comando para adicionar coluna no mysql
+alter table Aluno add Data_Nascimento tinyint after Nome;
+alter table Livro add ISBN int (13)
+
+// comando para alterar nome de um coluna no mysql
+alter table Aluno change column Telefone Contato varchar (20)
+
+// comando para excluir um campo da tabela no mysql
+alter table livro drop column ISBN
