@@ -6,7 +6,7 @@ create database cadastro
 default character set utf8
 default collate utf8_general_ci;
 
-create table pessoas (
+create table alunos (
 id int not null auto_increment,
 nome varchar(30) not null,
 nascimento date,
@@ -17,4 +17,28 @@ nacionalidade varchar (20) default 'Brasil',
 primary key (id)
 ) default charset = utf8;
 
-OBs: resolução em andamento.
+create table estagio (
+id_estagiario int not null auto_increment,
+nome varchar(30) not null,
+bolsa_estagio decimal (5,2),
+foreign key (id_estagiario) references id(alunos)
+)default charset = utf8;
+
+SELECT * FROM alunos;
+SELECT * FROM estagio;
+
+// inner join
+SELECT id, nome
+FROM alunos INNER JOIN estagio
+ON a.id = e.id_estagiario;
+
+//left join
+SELECT id, nome
+FROM alunos LEFT JOIN estagio
+ON a.id = e.id_estagiario;
+
+// right join
+SELECT id, nome
+FROM alunos RIGHT JOIN estagio
+ON a.id = e.id_estagiario;
+
