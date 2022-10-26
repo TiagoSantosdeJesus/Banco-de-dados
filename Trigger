@@ -1,3 +1,5 @@
+Você deve criar uma tabela para executar uma trigger que relacione algum comando, como: insert, select, delete ou update.
+
 create database cadastro
 default character set utf8
 default collate utf8_general_ci;
