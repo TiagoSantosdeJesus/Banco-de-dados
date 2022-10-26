@@ -2,7 +2,7 @@ Uma empresa precisa criar um relatório que faça um levantamento diário da qua
 Para isso, crie um procedure que será usado para agilizar todos os processos.
 
 delimiter $$
-procedure qtd_vendas_dia (in quantidade int)
+create procedure qtd_vendas_dia (in quantidade int)
 begin
 select * from vendas_dia
 limit quantidade;
