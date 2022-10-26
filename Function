@@ -1,2 +1,9 @@
 Crie uma função que some todos os clientes cadastrados em uma loja durante um dia.
 
+delimiter $$
+create function clientes_cadastrados_dia ()
+returns decimal(10,0)
+begin
+
+end $$
+delimiter ;
